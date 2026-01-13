@@ -293,3 +293,5 @@ input.addEventListener("input", (event) => {
     console.log("el texto es:", event.target.value);
     title = event.target.value
 });
+
+console.log("dsfsdbcvxbcvbnn")
