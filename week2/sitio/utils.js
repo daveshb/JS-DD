@@ -44,5 +44,31 @@ export const getHour=()=>{
 }
 
 
+export async function obtenerClima(ciudad) {
+  const API_KEY = "5b5b731343003351e1780f61e7a57c21";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${'medellin'}&appid=${API_KEY}&units=metric&lang=es`;
+
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Error HTTP: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    return {
+      ciudad: data.name,
+      temperatura: data.main.temp,
+      sensacion: data.main.feels_like,
+      humedad: data.main.humidity,
+      descripcion: data.weather[0].description
+    };
+  } catch (error) {
+    console.error("Error al obtener el clima:", error);
+    throw error;
+  }
+}
+
 
 
