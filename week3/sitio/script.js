@@ -1,6 +1,6 @@
 console.log("si sirve");
 
-const title = document.getElementById("title")
+const title = document.getElementById("title");
 const btn = document.getElementById("btn");
 const btnR = document.getElementById("btnR");
 
@@ -9,9 +9,9 @@ const container = document.getElementById("list");
 const titleH2 = document.getElementsByTagName("h2");
 
 
-const card1 = document.getElementById("card-1")
-const buttonBlue = document.getElementById("buttonBlue")
-const buttonRemove = document.getElementById("buttonBlueR")
+const card1 = document.getElementById("card-1");
+const buttonBlue = document.getElementById("buttonBlue");
+const buttonRemove = document.getElementById("buttonBlueR");
 
 
 
